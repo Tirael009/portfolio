@@ -454,6 +454,10 @@ body.loaded {
 
 /* === Responsive === */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
   .nav-container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -471,7 +475,7 @@ body.loaded {
   }
 
   .logo img {
-    width: 120px;
+    width: 150px;
     height: auto;
   }
 
@@ -518,7 +522,7 @@ body.loaded {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
-    padding: 3rem 1rem 2rem;
+    padding: 1rem 0.5rem;
     max-width: 100%;
   }
 
@@ -544,7 +548,7 @@ body.loaded {
   }
 
   section {
-    padding: 2rem 1rem;
+    padding: 1rem 0.5rem;
   }
 
   .footer-container {

@@ -713,7 +713,8 @@ body.loaded {
 }
 
 .footer-hire {
-  margin-top: 2rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .hire-btn {
@@ -752,9 +753,11 @@ body.loaded {
 
 .footer-socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.2rem;
-  margin-top: 1.5rem;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .social-icon img {

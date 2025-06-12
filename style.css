@@ -416,6 +416,11 @@ body.loaded {
 
 /* === Responsive === */
 @media (max-width: 768px) {
+  body {
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+  }
+  
   .nav-container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -424,6 +429,20 @@ body.loaded {
     gap: 1rem;
     padding: 1rem;
     position: relative;
+  }
+
+  section,
+  .hero,
+  .contact,
+  .footer-container,
+  .footer-socials,
+  .footer-hire,
+  .contact-form {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
   }
 
   .logo img {
@@ -514,6 +533,26 @@ body.loaded {
   }
 
   .footer-hire {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .container,
+  .footer-container,
+  .hero,
+  .contact-form {
+    width: 95vw;
+    margin: 0 auto;
+  }
+
+  .footer-socials {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-hire {
+    margin-top: 1rem;
     text-align: center;
   }
 }

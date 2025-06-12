@@ -47,7 +47,7 @@ body.loaded {
 }
 
 .logo img {
-  max-height: 60px;
+  max-height: 110px;
   height: auto;
   width: auto;
 }
@@ -192,6 +192,30 @@ body.loaded {
   border-radius: 15px;
   border: 3px solid #00f7ff;
   box-shadow: 0 0 30px rgba(0, 247, 255, 0.2);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.left {
+  transform: translateX(-60px);
+}
+
+.reveal.right {
+  transform: translateX(60px);
+}
+
+.reveal.left.visible,
+.reveal.right.visible {
+  transform: translateX(0);
 }
 
 /* === About me === */
@@ -416,11 +440,6 @@ body.loaded {
 
 /* === Responsive === */
 @media (max-width: 768px) {
-  body {
-    padding: 0 1.5rem;
-    box-sizing: border-box;
-  }
-  
   .nav-container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -431,22 +450,8 @@ body.loaded {
     position: relative;
   }
 
-  section,
-  .hero,
-  .contact,
-  .footer-container,
-  .footer-socials,
-  .footer-hire,
-  .contact-form {
-    max-width: 100%;
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    box-sizing: border-box;
-  }
-
   .logo img {
-    max-height: 50px;
+    max-height: 80px;
   }
 
   .nav-links {
@@ -533,26 +538,6 @@ body.loaded {
   }
 
   .footer-hire {
-    text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .container,
-  .footer-container,
-  .hero,
-  .contact-form {
-    width: 95vw;
-    margin: 0 auto;
-  }
-
-  .footer-socials {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .footer-hire {
-    margin-top: 1rem;
     text-align: center;
   }
 }
@@ -644,7 +629,7 @@ body.loaded {
   }
 
   .logo img {
-    max-height: 45px;
+    max-height: 70px;
   }
 
   .lang-switcher {
@@ -828,3 +813,28 @@ body.loaded {
   }
 }
 
+@keyframes blink-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px #00f7ff);
+  }
+  50% {
+    filter: drop-shadow(0 0 1px #00f7ff);
+  }
+}
+
+@keyframes assemble {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animated-logo {
+  width: 100px;
+  animation: assemble 1.2s ease-out, blink-glow 4s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}

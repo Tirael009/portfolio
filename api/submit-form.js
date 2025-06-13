@@ -19,6 +19,7 @@ export default async function handler(req, res) {
         body: JSON.stringify({
             name: name, 
             email: email, 
+            phone: phone,
             message: message
         }),
       });

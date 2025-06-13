@@ -5,13 +5,21 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
+  const phone = document.getElementById('phone').value.trim(); // Получаем номер телефона
+  const terms = document.getElementById('terms').checked; // Проверяем чекбокс
+
+  // Если чекбокс не отмечен, показываем предупреждение
+  if (!terms) {
+    alert('Вы должны согласиться с условиями.');
+    return;
+  }
 
   // Создаем объект данных для отправки
-  const payload = { name, email, message };
+  const payload = { name, email, message, phone, terms };
 
   try {
-    // Отправляем запрос на серверless-функцию на Vercel
-    const res = await fetch('/api/submit-form', { // Путь к серверless-функции
+    // Отправляем запрос на серверless-функцию
+    const res = await fetch('/api/submit-form', {
       method: 'POST', // Используем метод POST
       headers: {
         'Content-Type': 'application/json', // Отправляем данные в формате JSON
@@ -21,16 +29,16 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
     // Если запрос успешен
     if (res.ok) {
-      alert('Form successfully submitted!'); // Показываем сообщение об успешной отправке
+      alert('Форма успешно отправлена!'); // Показываем сообщение об успешной отправке
       e.target.reset(); // Очищаем форму
     } else {
       // Если произошла ошибка на сервере, показываем её пользователю
       const error = await res.json();
-      alert('Error: ' + (error?.error || 'Something went wrong'));
+      alert('Ошибка: ' + (error?.error || 'Что-то пошло не так'));
     }
   } catch (err) {
     // Если произошла ошибка при отправке запроса (например, проблема с интернетом)
-    alert('Error submitting the form. Please check your connection.');
+    alert('Ошибка при отправке формы. Проверьте подключение.');
     console.error(err); // Логируем ошибку в консоль для отладки
   }
 });

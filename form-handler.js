@@ -10,7 +10,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   };
 
   try {
-    const res = await fetch('http://91.99.15.82:8055/items/form_submissions', {
+    const res = await fetch('https://91.99.15.82:8055/items/form_submissions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

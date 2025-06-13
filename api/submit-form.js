@@ -1,27 +1,31 @@
 export default async function handler(req, res) {
   // Устанавливаем заголовки для CORS
-  res.setHeader('Access-Control-Allow-Origin', '*'); // Или замените '*' на ваш домен
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Или замените '*' на ваш домен, если хотите ограничить доступ
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
   if (req.method === 'POST') {
-    const { name, email, message } = req.body; // Извлекаем данные из формы
+    // Извлекаем данные из тела запроса
+    const { name, email, message } = req.body;
 
     try {
-      // Отправляем данные в Directus API
-      const response = await fetch('http://directus.botika.cloud/items/form_submissions', {
+      // Отправляем запрос на API Directus
+      const response = await fetch('https://directus.botika.cloud/items/form_submissions', {
         method: 'POST',
         headers: {
-          'Authorization': 'Bearer NN1KVI8S9UI88OfBLAj99lzaZkzGvfRA', // Ваш API-ключ
           'Content-Type': 'application/json',
+          'Authorization': 'Bearer NNlKVI8S9UI88OfBLAj99lzaZkzGvfRA', // Ваш API токен
         },
         body: JSON.stringify({
-          name: name,
-          email: email,
-          message: message,
+          data: {
+            name: name, 
+            email: email, 
+            message: message
+          }
         }),
       });
 
+      // Если запрос успешен
       if (response.ok) {
         res.status(200).json({ success: true, message: 'Form successfully submitted!' });
       } else {
@@ -29,9 +33,10 @@ export default async function handler(req, res) {
         res.status(400).json({ error: error?.errors?.[0]?.message || 'Something went wrong' });
       }
     } catch (err) {
+      // Обработка ошибки
       res.status(500).json({ error: 'Error submitting the form. Please check your connection.' });
     }
   } else {
-    res.status(405).json({ error: 'Method Not Allowed' });
+    res.status(405).json({ error: 'Method Not Allowed' }); // Для других методов (например, GET)
   }
 }

@@ -17,11 +17,9 @@ export default async function handler(req, res) {
           'Authorization': 'Bearer NNlKVI8S9UI88OfBLAj99lzaZkzGvfRA', // Ваш API токен
         },
         body: JSON.stringify({
-          data: {
             name: name, 
             email: email, 
             message: message
-          }
         }),
       });
 

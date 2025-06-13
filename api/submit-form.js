@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
     try {
       // Отправляем данные в Directus API
-      const response = await fetch('http://91.99.15.82:8055/items/form_submissions', {
+      const response = await fetch('http://directus.botika.cloud/items/form_submissions', {
         method: 'POST',
         headers: {
           'Authorization': 'Bearer NN1KVI8S9UI88OfBLAj99lzaZkzGvfRA', // Ваш API-ключ

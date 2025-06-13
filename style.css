@@ -467,11 +467,12 @@ body.loaded {
   margin-bottom: 1.5rem;
 }
 .form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
   color: #cfd2dc;
   font-weight: 600;
 }
+
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -504,6 +505,41 @@ body.loaded {
 .contact-form button:hover {
   background: #00d2e6;
   box-shadow: 0 0 20px rgba(0, 247, 255, 0.4);
+}
+.form-group input[type="tel"] {
+  padding: 0.8rem;
+  border: 1px solid #2a2e35;
+  border-radius: 6px;
+  background-color: #1a1d24;
+  color: #ffffff;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.form-group input[type="tel"]:focus {
+  outline: none;
+  border-color: #00f7ff;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: #00f7ff;
+}
+
+.checkbox-group label {
+  margin: 0;
+  font-weight: 500;
+  color: #cfd2dc;
+  font-size: 0.95rem;
 }
 @media (max-width: 600px) {
   .nav-container {

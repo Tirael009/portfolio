@@ -4,9 +4,15 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
+  // Обработка POST-запроса
   if (req.method === 'POST') {
     // Извлекаем данные из тела запроса
-    const { name, email, message } = req.body;
+    const { name, email, message, phone } = req.body;
+
+    // Валидация данных
+    if (!name || !email || !message || !phone) {
+      return res.status(400).json({ error: 'All fields are required.' });
+    }
 
     try {
       // Отправляем запрос на API Directus
@@ -14,28 +20,29 @@ export default async function handler(req, res) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer NNlKVI8S9UI88OfBLAj99lzaZkzGvfRA', // Ваш API токен
+          'Authorization': `Bearer NNlKVI8S9UI88OfBLAj99lzaZkzGvfRA`, // Используем переменную окружения для токена
         },
         body: JSON.stringify({
-        name: name, 
-        email: email, 
-        message: message, 
-        phone: phone,
-      }),
+          name: name,
+          email: email,
+          phone: phone,
+          message: message
+        }),
       });
 
-      // Если запрос успешен
+      // Проверка успешности запроса
       if (response.ok) {
         res.status(200).json({ success: true, message: 'Form successfully submitted!' });
       } else {
         const error = await response.json();
-        res.status(400).json({ error: error?.errors?.[0]?.message || 'Something went wrong' });
+        res.status(400).json({ error: error?.errors?.[0]?.message || 'Something went wrong with Directus' });
       }
     } catch (err) {
-      // Обработка ошибки
+      // Ошибка при отправке запроса
       res.status(500).json({ error: 'Error submitting the form. Please check your connection.' });
     }
   } else {
-    res.status(405).json({ error: 'Method Not Allowed' }); // Для других методов (например, GET)
+    // Ошибка, если метод не POST
+    res.status(405).json({ error: 'Method Not Allowed' });
   }
 }

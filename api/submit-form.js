@@ -17,11 +17,11 @@ export default async function handler(req, res) {
           'Authorization': 'Bearer NNlKVI8S9UI88OfBLAj99lzaZkzGvfRA', // Ваш API токен
         },
         body: JSON.stringify({
-            name: name, 
-            email: email, 
-            phone: phone,
-            message: message
-        }),
+        name: name, 
+        email: email, 
+        message: message, 
+        phone: phone,
+      }),
       });
 
       // Если запрос успешен

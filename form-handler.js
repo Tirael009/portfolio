@@ -1,33 +1,37 @@
+// Обработчик отправки формы
 document.getElementById('contactForm').addEventListener('submit', async function (e) {
-  e.preventDefault();
+  e.preventDefault(); // Отменяем стандартное поведение формы (перезагрузку страницы)
 
+  // Получаем значения из формы
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
 
-  const payload = {
-    data: { name, email, message }
-  };
+  // Создаем объект данных для отправки
+  const payload = { name, email, message };
 
   try {
-    const res = await fetch('https://directus.botika.cloud/items/form_submissions', {
-      method: 'POST',
+    // Отправляем запрос на серверless-функцию на Vercel
+    const res = await fetch('/api/submit-form', { // Путь к серверless-функции
+      method: 'POST', // Используем метод POST
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer NNlKVI8S9UI88OfBLAj99lzaZkzGvfRA'
+        'Content-Type': 'application/json', // Отправляем данные в формате JSON
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload), // Преобразуем данные в JSON и отправляем
     });
 
+    // Если запрос успешен
     if (res.ok) {
-      alert('Form successfully submitted!');
-      e.target.reset();
+      alert('Form successfully submitted!'); // Показываем сообщение об успешной отправке
+      e.target.reset(); // Очищаем форму
     } else {
+      // Если произошла ошибка на сервере, показываем её пользователю
       const error = await res.json();
-      alert('Error: ' + (error?.errors?.[0]?.message || 'Something went wrong'));
+      alert('Error: ' + (error?.error || 'Something went wrong'));
     }
   } catch (err) {
+    // Если произошла ошибка при отправке запроса (например, проблема с интернетом)
     alert('Error submitting the form. Please check your connection.');
-    console.error(err);
+    console.error(err); // Логируем ошибку в консоль для отладки
   }
 });

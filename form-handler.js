@@ -1,8 +1,7 @@
-// Обработчик отправки формы
 document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault(); // Отменяем стандартное поведение формы (перезагрузку страницы)
 
-  // Получаем значения из формы
+  // Получаем значения из полей формы
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();

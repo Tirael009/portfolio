@@ -1,218 +1,323 @@
 // === Перевод языка ===
 const translations = {
-  en: {
-    home: "Home",
-    projects: "Projects",
-    skills: "Skills",
-    contact: "Contact",
-    "hero-heading": "Automate\nWorkflows,\nSupercharge Efficiency",
-    "hero-desc": "I create intelligent solutions that streamline business processes and harness the power of AI.",
-    "explore-more": "Explore More",
-    "agree-terms": "I agree to the privacy policy and to be contacted regarding my request",
-    "platform-capabilities": "Skills",
-    "custom-automations-title": "Custom Automations",
-    "custom-automations-desc": "Automate repetitive tasks with ease.",
-    "ai-bots-title": "AI Bots",
-    "ai-bots-desc": "Deploy intelligent conversational agents.",
-    "third-party-integrations-title": "Third-Party Integrations",
-    "third-party-integrations-desc": "Seamlessly connect your favorite tools.",
-    "automation-analytics-title": "Automation Analytics",
-    "automation-analytics-desc": "Measure and optimize performance.",
-    "sales-notification": "Sales Notification",
-    "ai-automation-title": "AI-Driven Automation",
-    "ai-automation-desc": "Build intelligent workflows that make decisions, analyze data, and interact with clients — automatically.",
-    "email-setup-title": "Email Infrastructure Setup",
-    "email-setup-desc": "From Amazon SES configuration to domain warm-up — I ensure your campaigns land in inbox, not spam.",
-    "crm-workflows-title": "Custom CRM Workflows",
-    "crm-workflows-desc": "Tailored CRM pipelines that follow your sales process and automate customer interactions.",
-    "landing-pages-title": "Landing Page Creation",
-    "landing-pages-desc": "High-converting, modern and mobile-ready landing pages, coded or no-code — as your business needs.",
-    "chat-user-1": "Hey, can you generate a monthly report for sales?",
-    "chat-bot-1": "Sure! Compiling sales data and generating PDF... Done. Do you want it by email?",
-    "chat-user-2": "Yes, send it to my manager too.",
-    "chat-bot-2": "Sent! ✅ Is there anything else I can help you with?",
-    "contact-us": "Contact Us",
-    name: "Name",
-    email: "Email",
-    phone: "Phone Number",
-    message: "Message",
-    send: "Send",
-    about: "About",
-  },
-  ua: {
-    home: "Головна",
-    projects: "Проєкти",
-    skills: "Навички",
-    contact: "Контакти",
-    "hero-heading": "Автоматизуй\nроботу,\nпідвищуй ефективність",
-    "hero-desc": "Я створюю інтелектуальні рішення для автоматизації бізнесу за допомогою AI.",
-    "explore-more": "Дізнатись більше",
-    "platform-capabilities": "Навички",
-    "agree-terms": "Я погоджуюсь з політикою конфіденційності та з тим, що мені можуть зв’язатися щодо мого запиту",
-    "custom-automations-title": "Кастомні автоматизації",
-    "custom-automations-desc": "Автоматизуйте рутинні задачі легко.",
-    "ai-bots-title": "AI Боти",
-    "ai-bots-desc": "Запускайте інтелектуальних агентів.",
-    "third-party-integrations-title": "Інтеграції",
-    "third-party-integrations-desc": "Підключайте улюблені інструменти.",
-    "automation-analytics-title": "Аналітика Автоматизації",
-    "automation-analytics-desc": "Вимірюйте ефективність.",
-    "sales-notification": "Сповіщення про продажі",
-    "ai-chatbot": "AI Чат-бот",
-    "interested": "Цікавить автоматизація вашого бізнесу?",
-    "ai-automation-title": "Автоматизація на основі ШІ",
-    "ai-automation-desc": "Створюю розумні воркфлоу, які приймають рішення, аналізують дані та взаємодіють з клієнтами автоматично.",
-    "email-setup-title": "Налаштування email-інфраструктури",
-    "email-setup-desc": "Від Amazon SES до прогріву домену — ваші листи не потраплятимуть у спам.",
-    "crm-workflows-title": "Індивідуальні CRM-процеси",
-    "crm-workflows-desc": "Автоматизовані CRM-пайплайни, що відповідають вашому продажному процесу.",
-    "landing-pages-title": "Створення лендингів",
-    "landing-pages-desc": "Сучасні, адаптивні та ефективні лендинги — кодом або безкодно, як вам потрібно.",
-    about: "Про мене",
-    "about-title": "Про мене",
-    "about-text": "Я спеціаліст з автоматизації бізнес-процесів, який допомагає компаніям спростити операції, підвищити ефективність і масштабуватися. Я створюю розумні автоматизовані воркфлоу за допомогою інструментів n8n, Make та Directus, інтегруючи штучний інтелект там, де він приносить найбільшу цінність.\n\nМій досвід охоплює автоматизацію email-маркетингу (Amazon SES, HTML-дизайн, прогрів домену), налаштування CRM, аналітику продажів і створення ефективних лендингів. Я також розробляю ботів на основі ШІ, які ведуть ліди, відповідають на запитання клієнтів і автоматизують процеси прийняття рішень.\n\nНезалежно від того, чи ви стартап, чи вже стабільний бізнес — я допоможу створити системи, які працюють на вас.",
-    "ai-chatbot": "AI Чат-бот",
-    "chat-user-1": "Привіт, можеш згенерувати щомісячний звіт з продажів?",
-    "chat-bot-1": "Звісно! Збираю дані про продажі та створюю PDF... Готово. Надіслати на пошту?",
-    "chat-user-2": "Так, надішли також моєму менеджеру.",
-    "chat-bot-2": "Надіслано! ✅ Чим ще можу допомогти?",
-    "contact-us": "Зв'язатися зі мною",
-    name: "Ім'я",
-    email: "Електронна пошта",
-    phone: "Номер телефону",
-    message: "Повідомлення",
-    send: "Надіслати",
-    about: "Про мене",
-  },
-  es: {
-    home: "Inicio",
-    projects: "Proyectos",
-    skills: "Habilidades",
-    contact: "Contacto",
-    "hero-heading": "Automatiza\nprocesos,\nmejora la eficiencia",
-    "hero-desc": "Creo soluciones inteligentes que optimizan procesos empresariales con IA.",
-    "explore-more": "Explorar más",
-    "platform-capabilities": "Habilidades",
-    "custom-automations-title": "Automatizaciones Personalizadas",
-    "custom-automations-desc": "Automatiza tareas repetitivas fácilmente.",
-    "ai-bots-title": "Bots de IA",
-    "agree-terms": "Acepto la política de privacidad y ser contactado respecto a mi solicitud",
-    "ai-bots-desc": "Despliega agentes conversacionales inteligentes.",
-    "third-party-integrations-title": "Integraciones de Terceros",
-    "third-party-integrations-desc": "Conecta tus herramientas favoritas.",
-    "automation-analytics-title": "Analítica de Automatización",
-    "automation-analytics-desc": "Mide y optimiza el rendimiento.",
-    "sales-notification": "Notificación de Ventas",
-    "ai-chatbot": "Chatbot de IA",
-    "interested": "¿Interesado en automatizar tu negocio?",
-    "ai-automation-title": "Automatización con IA",
-    "ai-automation-desc": "Flujos de trabajo inteligentes que toman decisiones, analizan datos e interactúan con clientes automáticamente.",
-    "email-setup-title": "Configuración de Email",
-    "email-setup-desc": "Desde Amazon SES hasta calentamiento de dominio — tus campañas llegarán al inbox, no al spam.",
-    "crm-workflows-title": "Flujos CRM Personalizados",
-    "crm-workflows-desc": "Pipelines de CRM hechos a medida que automatizan la gestión de clientes.",
-    "landing-pages-title": "Creación de Landing Pages",
-    "landing-pages-desc": "Landing pages modernas y efectivas, con código o no-code — como lo necesites.",
-    about: "Sobre mí",
-    "about-title": "Sobre mí",
-    "about-text": "Soy un especialista en automatización de procesos empresariales que ayuda a las empresas a optimizar operaciones, mejorar la eficiencia y escalar más rápido. Me especializo en crear flujos de trabajo inteligentes usando herramientas como n8n, Make y Directus, integrando IA donde aporta más valor.\n\nMi experiencia incluye automatización de email marketing (Amazon SES, diseño en HTML, calentamiento de dominio), configuración de CRM, analítica de ventas y creación de landing pages efectivas. También desarrollo bots con IA que interactúan con clientes, responden preguntas y automatizan decisiones.\n\nTanto si eres una startup como una empresa consolidada, puedo ayudarte a construir sistemas inteligentes que trabajen para ti.",
-    "ai-chatbot": "Chatbot de IA",
-    "chat-user-1": "Hola, ¿puedes generar un informe mensual de ventas?",
-    "chat-bot-1": "¡Claro! Compilando los datos de ventas y generando PDF... Listo. ¿Quieres que lo envíe por correo?",
-    "chat-user-2": "Sí, envíalo también a mi gerente.",
-    "chat-bot-2": "¡Enviado! ✅ ¿Hay algo más con lo que pueda ayudarte?",
-    "contact-us": "Contáctame",
-    name: "Nombre",
-    email: "Correo electrónico",
-    phone: "Número de teléfono",
-    message: "Mensaje",
-    send: "Enviar",
-    about: "Sobre mí",
-  }
+	en: {
+		home: "Home",
+		projects: "Projects",
+		skills: "Skills",
+		contact: "Contact",
+		"hero-heading": "AI-Powered Workflows. Real Business Impact",
+		"hero-desc": "I build automated systems that handle your sales, emails, and CRM — so your business runs 24/7, without micromanagement.",
+		"explore-more": "Let’s Automate",
+		// Skill Cards
+		"platform-capabilities": "Skills",
+		"custom-automations-title": "Workflow Automation",
+		"custom-automations-desc": "Process automation: leads, tasks, notifications, reports — no manual routine.",
+		"ai-bots-title": "AI Systems & Bots",
+		"ai-bots-desc": "AI for analytics, smart replies, content generation and chatbot flows.",
+		"third-party-integrations-title": "Third-Party Integrations",
+		"third-party-integrations-desc": "Connect Telegram, Stripe, OpenAI, ZeroBounce and many more.",
+		"automation-analytics-title": "Real-Time Dashboards",
+		"automation-analytics-desc": "Live analytics and charts to monitor sales and operations.",
+		"ai-automation-title": "AI-Driven Automation",
+		"ai-automation-desc": "Intelligent workflows that analyze, decide, create, and act for you.",
+		"email-setup-title": "Email Infrastructure",
+		"email-setup-desc": "Email marketing with Amazon SES: warm-up, validation, design, inbox boost.",
+		"crm-workflows-title": "Custom CRM Logic",
+		"crm-workflows-desc": "Smart CRM automation: follow-ups, reminders, status flows.",
+		"landing-pages-title": "Landing Pages",
+		"landing-pages-desc": "Landing pages and forms: responsive design, CRM-ready and analytics ready.",
+		"code-skills-title": "JS / Python / SQL",
+		"code-skills-desc": "Code-level logic: functions, transformations and API scripting.",
+		"platforms-title": "n8n, Make, Directus",
+		"platforms-desc": "Expert workflows using top open-source and low-code automation tools.",
+		// About Me Section
+		"about-title": "About Me",
+		"about-intro": "I'm a business automation specialist helping companies simplify operations, boost efficiency and scale faster. I design intelligent workflows using tools like n8n, Make and Directus — integrating AI where it delivers the most value.",
+		"about-benefits-title": "What You Get",
+		"about-benefit-1": "Automated processes that save you time and money",
+		"about-benefit-2": "Systems that run 24/7 without manual control",
+		"about-benefit-3": "Analytics and dashboards for clear decision-making",
+		"about-benefit-4": "CRM tools tailored to your exact flow",
+		"about-benefit-5": "Email marketing with high deliverability and response",
+		"about-benefit-6": "Integration with the platforms you already use",
+		"about-closing": "Whether you're a startup or an established company — I’ll help you implement automation that works for you.",
+		// AI Use Cases Section
+		"ai-usecases-title": "AI Automations in Action",
+		"sales-notification": "AI-Powered Sales Automation",
+		"sales-ai-caption": "AI automatically scores leads, generates offers, updates CRM and sends follow-up emails — all in one workflow.",
+		"ai-chatbot": "Conversational Assistant with OpenAI",
+		"chatbot-caption": "AI chatbot that communicates with users, compiles reports, and executes requests — like sending data to a manager.",
+		"chat-user-1": "Hey, can you summarize today's incoming leads?",
+		"chat-bot-1": "Sure! You've received 38 new leads today. 24 were qualified, 14 unqualified.",
+		"chat-user-2": "Can you send the qualified ones to the CRM?",
+		"chat-bot-2": "Already done ✅ Leads pushed to CRM with tags and scores.",
+		"chat-user-3": "Great. Draft a follow-up email for the top 5.",
+		"chat-bot-3": "Email prepared. Would you like me to send it now or save as draft?",
+		"chat-user-4": "Save it as draft. I’ll review it in a bit.",
+		"chat-bot-4": "Done. Let me know if you'd like to schedule it later."
+	},
+	ua: {
+		home: "Головна",
+		projects: "Проєкти",
+		skills: "Навички",
+		contact: "Контакти",
+		about: "Про мене",
+		"hero-heading": "Автоматизація на основі ШІ.<br/>Бізнес-результат",
+		"hero-desc": "Я створюю автоматизовані системи для лідів, продажів, email-кампаній і CRM — щоб ваш бізнес працював 24/7 без постійного контролю.",
+		"explore-more": "Автоматизуймо",
+		"agree-terms": "Я погоджуюсь з політикою конфіденційності та з тим, що мені можуть зв’язатися щодо мого запиту",
+		// Skill Cards
+		"platform-capabilities": "Навички",
+		"custom-automations-title": "Автоматизація процесів",
+		"custom-automations-desc": "Автоматизація: заявки, задачі, сповіщення, звіти — без ручної рутини.",
+		"ai-bots-title": "Системи та боти з ШІ",
+		"ai-bots-desc": "ШІ для аналітики, відповідей, генерації контенту та чат-ботів.",
+		"third-party-integrations-title": "Інтеграції",
+		"third-party-integrations-desc": "Підключення Telegram, Stripe, OpenAI, ZeroBounce та інших.",
+		"automation-analytics-title": "Дашборди в реальному часі",
+		"automation-analytics-desc": "Жива аналітика і графіки для контролю продажів і процесів.",
+		"ai-automation-title": "Автоматизація з ШІ",
+		"ai-automation-desc": "Інтелектуальні воркфлоу, які аналізують, вирішують і діють.",
+		"email-setup-title": "Інфраструктура Email",
+		"email-setup-desc": "Email-розсилки з Amazon SES: прогрів, валідація, дизайн, inbox.",
+		"crm-workflows-title": "Логіка CRM",
+		"crm-workflows-desc": "Автоматизація CRM: нагадування, статуси, повторні дії.",
+		"landing-pages-title": "Лендінги",
+		"landing-pages-desc": "Односторінкові сайти та форми: адаптивність, аналітика, CRM.",
+		"code-skills-title": "JS / Python / SQL",
+		"code-skills-desc": "Кодова логіка: функції, трансформації та API-запити.",
+		"platforms-title": "n8n, Make, Directus",
+		"platforms-desc": "Автоматизація з найкращими open-source/low-code платформами.",
+		// AI Use Cases Section
+		"ai-usecases-title": "Автоматизація з ІІ в дії",
+		"sales-notification": "Автоматизація продажів на базі ШІ",
+		"sales-ai-caption": "ШІ автоматично оцінює ліди, створює офери, оновлює CRM та надсилає follow-up листи — все в одному процесі.",
+		"ai-chatbot": "Розмовний асистент з OpenAI",
+		"chatbot-caption": "Чат-бот з ШІ, який спілкується з користувачами, створює звіти і виконує запити — наприклад, надсилання даних менеджеру.",
+		"chat-user-1": "Привіт, можеш підсумувати сьогоднішні вхідні ліди?",
+		"chat-bot-1": "Звісно! Сьогодні отримано 38 нових лідів. 24 кваліфіковані, 14 — ні.",
+		"chat-user-2": "Можеш відправити кваліфіковані в CRM?",
+		"chat-bot-2": "Готово ✅ Ліди перенесені до CRM з тегами та оцінками.",
+		"chat-user-3": "Добре. Створи чернетку follow-up листа для топ-5.",
+		"chat-bot-3": "Чернетка готова. Відправити зараз чи зберегти?",
+		"chat-user-4": "Збережи як чернетку. Перевірю пізніше.",
+		"chat-bot-4": "Готово. Повідом, якщо захочеш запланувати відправку.",
+		name: "Ім’я",
+		email: "Електронна пошта",
+		phone: "Номер телефону",
+		message: "Повідомлення",
+		send: "Надіслати",
+		// About Me
+		"about-title": "Про мене",
+		"about-text-line-1": "Мене звати Іван — я інженер з автоматизації, допомагаю бізнесам спрощувати процеси, прибирати рутину та масштабуватись ефективно.",
+		"about-text-line-2": "Я створюю backend-системи на базі <strong>n8n</strong>, <strong>Directus</strong> і <strong>OpenAI</strong>, які автоматизують розсилки, звіти, завдання, сповіщення та бізнес-логіку — щоб ваші інструменти працювали разом, а не окремо.",
+		"about-text-line-3": "Мої рішення працюють цілодобово: обробляють дані, формують точні звіти, зменшують помилки та забезпечують стабільність. Вони не забувають і не сповільнюються навіть у пік навантаження.",
+		"about-benefits-heading": "Що ви отримаєте:",
+		"about-benefit-1": "Суттєва економія часу завдяки автоматизації рутинних задач",
+		"about-benefit-2": "Зниження витрат за рахунок оптимізації процесів",
+		"about-benefit-3": "Достовірні дані та звіти в реальному часі для швидких рішень",
+		"about-benefit-4": "Масштабованість — рішення не втрачають ефективності при зростанні",
+		"about-benefit-5": "Кращий клієнтський досвід завдяки швидкості й точності",
+		"about-text-line-4": "Якщо хочете бізнес, який працює розумніше — а не важче — реалізуємо це разом."
+	},
+	es: {
+		home: "Inicio",
+		projects: "Proyectos",
+		skills: "Habilidades",
+		contact: "Contacto",
+		about: "Sobre mí",
+		"hero-heading": "Flujos de trabajo con IA.<br/>Impacto real para tu negocio",
+		"hero-desc": "Construyo sistemas automatizados que gestionan tus ventas, emails y CRM — para que tu negocio funcione 24/7 sin microgestión.",
+		"explore-more": "Automatizar ahora",
+		"agree-terms": "Acepto la política de privacidad y ser contactado respecto a mi solicitud",
+		// Skill Cards
+		"platform-capabilities": "Habilidades",
+		"custom-automations-title": "Automatización de Flujos",
+		"custom-automations-desc": "Automatización de procesos: tareas, notificaciones y reportes sin rutina manual.",
+		"ai-bots-title": "Sistemas y Bots con IA",
+		"ai-bots-desc": "IA para análisis, respuestas inteligentes, generación de contenido y bots.",
+		"third-party-integrations-title": "Integraciones",
+		"third-party-integrations-desc": "Conexión con Telegram, Stripe, OpenAI, ZeroBounce y más.",
+		"automation-analytics-title": "Paneles en Tiempo Real",
+		"automation-analytics-desc": "Gráficas y analíticas en vivo para ventas y operaciones.",
+		"ai-automation-title": "Automatización con IA",
+		"ai-automation-desc": "Flujos inteligentes que analizan, deciden, crean y actúan por ti.",
+		"email-setup-title": "Infraestructura de Email",
+		"email-setup-desc": "Email marketing con Amazon SES: calentamiento, validación y diseño.",
+		"crm-workflows-title": "Lógica CRM Personalizada",
+		"crm-workflows-desc": "Automatización de CRM: recordatorios, seguimientos, flujos de estados.",
+		"landing-pages-title": "Landing Pages",
+		"landing-pages-desc": "Sitios de una sola página y formularios: diseño adaptativo y conexión con CRM y análisis.",
+		"code-skills-title": "JS / Python / SQL",
+		"code-skills-desc": "Lógica avanzada: funciones, transformaciones y scripting API.",
+		"platforms-title": "n8n, Make, Directus",
+		"platforms-desc": "Automatizaciones con herramientas open-source y low-code.",
+		"sales-notification": "Notificación de Ventas",
+		"ai-chatbot": "Chatbot IA",
+		"chat-user-1": "Hola, ¿puedes generar un informe mensual de ventas?",
+		"chat-bot-1": "¡Por supuesto! Compilando datos y generando PDF... Hecho. ¿Quieres que lo envíe por email?",
+		"chat-user-2": "Sí, también a mi gerente.",
+		"chat-bot-2": "¡Enviado! ✅ ¿Hay algo más en lo que pueda ayudarte?",
+		"contact-us": "Contáctame",
+		name: "Nombre",
+		email: "Correo electrónico",
+		phone: "Número de teléfono",
+		message: "Mensaje",
+		send: "Enviar",
+		"about-title": "Sobre mí",
+		"about-text-line-1": "Soy Ivan — un ingeniero de automatización que ayuda a las empresas a simplificar procesos, eliminar trabajo manual y escalar de forma efectiva.",
+		"about-text-line-2": "Diseño sistemas backend con <strong>n8n</strong>, <strong>Directus</strong> y <strong>OpenAI</strong> para automatizar emails, informes, flujos de tareas, notificaciones y lógica personalizada — para que tus herramientas trabajen juntas, no por separado.",
+		"about-text-line-3": "Mis soluciones operan 24/7: procesan datos, generan análisis precisos, reducen errores humanos y garantizan consistencia. No duermen, no olvidan ni se ralentizan — ni siquiera en los momentos de más carga.",
+		"about-benefits-heading": "Qué obtendrás:",
+		"about-benefit-1": "Ahorro significativo de tiempo cada mes al automatizar tareas repetitivas",
+		"about-benefit-2": "Menores costos operativos gracias a procesos más eficientes",
+		"about-benefit-3": "Datos fiables e informes en tiempo real para decisiones más rápidas",
+		"about-benefit-4": "Sistemas escalables que soportan un mayor volumen sin esfuerzo",
+		"about-benefit-5": "Mejor experiencia del cliente gracias a la velocidad y precisión",
+		"about-text-line-4": "Si quieres un negocio que funcione de forma más inteligente — y sin fricciones — construyámoslo juntos.",
+		// AI Use Cases Section
+		"ai-usecases-title": "Automatizaciones con IA en Acción",
+		"sales-notification": "Automatización de Ventas con IA",
+		"sales-ai-caption": "La IA califica leads, genera ofertas, actualiza el CRM y envía correos de seguimiento — todo en un solo flujo.",
+		"ai-chatbot": "Asistente Conversacional con OpenAI",
+		"chatbot-caption": "Chatbot de IA que se comunica con usuarios, compila informes y ejecuta solicitudes — como enviar datos al gerente.",
+		"chat-user-1": "Hola, ¿puedes resumir los leads entrantes de hoy?",
+		"chat-bot-1": "¡Claro! Hoy has recibido 38 nuevos leads. 24 calificados, 14 no calificados.",
+		"chat-user-2": "¿Puedes enviar los calificados al CRM?",
+		"chat-bot-2": "Listo ✅ Leads enviados al CRM con etiquetas y puntuaciones.",
+		"chat-user-3": "Perfecto. Redacta un email de seguimiento para los 5 mejores.",
+		"chat-bot-3": "Correo preparado. ¿Deseas enviarlo ahora o guardarlo como borrador?",
+		"chat-user-4": "Guárdalo como borrador. Lo revisaré más tarde.",
+		"chat-bot-4": "Hecho. Avísame si deseas programarlo más tarde."
+	}
 };
-      function changeLanguage(lang) {
-        const elements = document.querySelectorAll("[data-translate]");
-        elements.forEach((el) => {
-          const key = el.getAttribute("data-translate");
-          if (translations[lang][key]) {
-            el.textContent = translations[lang][key];
-          }
-          });
-        }
-        // установка языка по умолчанию
-        changeLanguage("en");
-        // переключение языка
-        const langButtons = document.querySelectorAll(".lang");
-        langButtons.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            langButtons.forEach((b) => b.classList.remove("active"));
-            btn.classList.add("active");
-            const lang = btn.getAttribute("data-lang");
-            changeLanguage(lang);
-            });
-            });
-            // === Scroll reveal ===
-            function revealOnScroll() {
-              const reveals = document.querySelectorAll(".reveal");
-              for (let el of reveals) {
-                const windowHeight = window.innerHeight;
-                const revealTop = el.getBoundingClientRect().top;
-                const revealPoint = 100;
-                if (revealTop < windowHeight - revealPoint) {
-                  el.classList.add("visible");
-                }
-              }
-            }
-            window.addEventListener("scroll", revealOnScroll);
-            window.addEventListener("load", () => {
-              document.body.classList.add("loaded");
-              revealOnScroll();
-              });
-              // === ScrollSpy: Подсветка активной ссылки в навигации ===
-              const navLinks = document.querySelectorAll(".nav-link");
-              const sections = document.querySelectorAll("section");
-              function updateActiveNavLink() {
-                let scrollY = window.pageYOffset;
-                sections.forEach((section) => {
-                  const sectionTop = section.offsetTop - 100;
-                  const sectionHeight = section.offsetHeight;
-                  const sectionId = section.getAttribute("id");
-                  if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    navLinks.forEach((link) => {
-                      link.classList.remove("active");
-                      if (link.getAttribute("href") === `#${sectionId}`) {
-                        link.classList.add("active");
-                      }
-                      });
-                    }
-                    });
-                  }
-                  window.addEventListener("scroll", updateActiveNavLink);
-                  // === Burger Menu Toggle ===
-                  const burger = document.querySelector('.burger');
-                  const navLinksContainer = document.querySelector('.nav-links');
-                  if (burger && navLinksContainer) {
-                    burger.addEventListener('click', () => {
-                      navLinksContainer.classList.toggle('show');
-                      });
-                      document.querySelectorAll('.nav-link').forEach(link => {
-                        link.addEventListener('click', () => {
-                          navLinksContainer.classList.remove('show');
-                          });
-                          });
-                        }
-                        // === Smooth scroll with offset for sticky header ===
-                        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                          anchor.addEventListener("click", function (e) {
-                            e.preventDefault();
-                            const targetID = this.getAttribute("href").substring(1);
-                            const targetElement = document.getElementById(targetID);
-                            const offset = 80; // отступ от верха (высота твоего sticky header)
-                            const elementPosition = targetElement.getBoundingClientRect().top;
-                            const offsetPosition = elementPosition + window.pageYOffset - offset;
-                            window.scrollTo({
-                              top: offsetPosition,
-                              behavior: "smooth"
-                              });
-                              });
-                              });
+
+function changeLanguage(lang) {
+	const elements = document.querySelectorAll("[data-translate]");
+	elements.forEach((el) => {
+		const key = el.getAttribute("data-translate");
+		if (translations[lang][
+				key
+			]) {
+			el.innerHTML = translations[lang][key];
+		}
+	});
+}
+// установка языка по умолчанию
+changeLanguage("en");
+// переключение языка
+const langButtons = document.querySelectorAll(".lang");
+langButtons.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		langButtons.forEach((b) => b.classList.remove("active"));
+		btn.classList.add("active");
+		const lang = btn.getAttribute("data-lang");
+		changeLanguage(lang);
+	});
+});
+// === Scroll reveal ===
+function revealOnScroll() {
+	const reveals = document.querySelectorAll(".reveal");
+	for (let el of reveals) {
+		const windowHeight = window.innerHeight;
+		const revealTop = el.getBoundingClientRect().top;
+		const revealPoint = 100;
+		if (revealTop < windowHeight - revealPoint) {
+			el.classList.add("visible");
+		}
+	}
+}
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", () => {
+	document.body.classList.add("loaded");
+	revealOnScroll();
+});
+// === ScrollSpy: Подсветка активной ссылки в навигации ===
+const navLinks = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll("section");
+
+function updateActiveNavLink() {
+	let scrollY = window.pageYOffset;
+	sections.forEach((section) => {
+		const sectionTop = section.offsetTop - 100;
+		const sectionHeight = section.offsetHeight;
+		const sectionId = section.getAttribute("id");
+		if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+			navLinks.forEach((link) => {
+				link.classList.remove("active");
+				if (link.getAttribute("href") === `#${sectionId}`) {
+					link.classList.add("active");
+				}
+			});
+		}
+	});
+}
+window.addEventListener("scroll", updateActiveNavLink);
+// === Burger Menu Toggle ===
+const burger = document.querySelector('.burger');
+const navLinksContainer = document.querySelector('.nav-links');
+if (burger && navLinksContainer) {
+	burger.addEventListener('click',
+		() => {
+			navLinksContainer.classList.toggle('show');
+		});
+	document.querySelectorAll('.nav-link').forEach(link => {
+		link.addEventListener('click', () => {
+			navLinksContainer.classList.remove('show');
+		});
+	});
+}
+// === Smooth scroll with offset for sticky header ===
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener("click", function(e) {
+		e.preventDefault();
+		const targetID = this.getAttribute("href").substring(1);
+		const targetElement = document.getElementById(targetID);
+		const offset = 80; // отступ от верха (высота твоего sticky header)
+		const elementPosition = targetElement.getBoundingClientRect().top;
+		const offsetPosition = elementPosition + window.pageYOffset - offset;
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: "smooth"
+		});
+	});
+});
+// === Typing Animation for Chat Messages ===
+function startTypingAnimation() {
+	const chatMessages = document.querySelectorAll("#chat-trigger .chat-message p");
+	let delay = 0;
+	const typingSpeed = 25;
+	chatMessages.forEach((msg) => {
+		const fullText = msg.textContent;
+		msg.textContent = "";
+		const container = msg.parentElement;
+		container.style.opacity = "0";
+		container.style.transform = "translateY(10px)";
+		setTimeout(() => {
+			container.style.opacity = "1";
+			container.style.transform = "translateY(0)";
+			let i = 0;
+			const type = () => {
+				if (i <= fullText.length) {
+					msg.textContent = fullText.slice(0, i++);
+					setTimeout(type, typingSpeed);
+				}
+			};
+			type();
+		}, delay);
+		delay += fullText.length * typingSpeed + 300;
+	});
+}
+// Запуск по скроллу
+const chatBox = document.getElementById("chat-trigger");
+let hasStarted = false;
+const observer = new IntersectionObserver((entries) => {
+	if (entries[0].isIntersecting && !hasStarted) {
+		startTypingAnimation();
+		hasStarted = true;
+		observer.disconnect();
+	}
+}, {
+	threshold: 0.5
+});
+observer.observe(chatBox);

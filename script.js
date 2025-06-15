@@ -5,6 +5,7 @@ const translations = {
 		projects: "Projects",
 		skills: "Skills",
 		contact: "Contact",
+		about: "About",
 		"hero-heading": "AI-Powered Workflows. Real Business Impact",
 		"hero-desc": "I build automated systems that handle your sales, emails, and CRM — so your business runs 24/7, without micromanagement.",
 		"explore-more": "Let’s Automate",

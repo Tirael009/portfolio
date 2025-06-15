@@ -41,7 +41,7 @@
      flex: 1;
 }
  .logo img {
-     max-height: 80px;
+     max-height: 100px;
      height: auto;
      width: auto;
 }
@@ -61,7 +61,7 @@
      font-weight: 600;
      transition: color 0.3s;
      font-size: 1.1rem;
-     letter-spacing: -0.3px;
+     white-space: nowrap;
 }
  .nav-link:hover, .nav-link.active {
      color: #00f7ff;
@@ -128,7 +128,7 @@
     /* убираем ограничение */
 }
  .hero-text h1 {
-     font-size: 4rem;
+     font-size: clamp(2rem, 6vw, 4rem);
     /* увеличиваем размер */
      margin-bottom: 1.5rem;
      font-weight: 800;
@@ -488,9 +488,10 @@
 }
  @media (max-width: 1000px) {
      .chat-message {
-         font-size: 0.95rem;
+         font-size: 0.85rem;
          padding: 0.7rem 1.1rem;
     }
+     
 }
  @media (max-width: 800px) {
      .chat-message {
@@ -620,8 +621,8 @@
          font-size: 2.5rem;
     }
      .hero-photo-img {
-         width: 250px;
-         height: 250px;
+         max-width: 300px;
+         max-height: 300px;
     }
      .card {
          padding: 1.5rem;
@@ -785,8 +786,8 @@
          display: flex;
     }
      .hero-photo-img {
-         width: 220px;
-         height: 220px;
+         max-width: 270px;
+         max-height: 270px;
     }
 }
  .footer {
@@ -919,7 +920,7 @@
     .footer-right {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
     }
 }
  @keyframes blink-glow {
@@ -967,8 +968,8 @@
 }
  @media (max-width: 935px) {
      .hero-photo-img {
-         width: 300px;
-         height: 300px;
+         min-width: 200px;
+         min-height: 200px;
     }
      .nav-link {
          font-size: 0.9rem;
@@ -993,6 +994,7 @@
      .logo img {
          max-height: 100px;
     }
+
 }
 /* Responsive logo resizing */
  .logo img {
@@ -1004,9 +1006,62 @@
      .logo img {
          width: 200px;
     }
+    .hero-photo img {
+        width: 300px;
+        height: 300px;
+    }
 }
  @media (max-width: 600px) {
      .logo img {
         min-width: 100px;
     }
+}
+
+@media (max-width: 425px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  body,
+  section,
+  .hero,
+  .contact-form,
+  .form-container,
+  .card,
+  .capabilities,
+  .examples,
+  .footer,
+  .footer-container,
+  .footer-hire,
+  .about,
+  .about-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .hero {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .form-container {
+    padding: 1rem;
+  }
+
+  .contact-form {
+    padding: 2rem 0.5rem;
+  }
+
+  .card {
+    padding: 1rem 0.75rem;
+  }
+
+  .footer {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .section-title,
+  .hero-text h1 {
+    text-align: center;
+  }
+  
 }

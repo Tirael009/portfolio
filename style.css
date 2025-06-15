@@ -441,7 +441,7 @@
      bottom: 0;
      width: 0;
      height: 0;
-     border-left: 10px solid #e0f7ff;
+     border-left: 10px solid #0f1c24;
      border-top: 10px solid transparent;
 }
  .chat-message.bot {
@@ -457,7 +457,7 @@
      bottom: 0;
      width: 0;
      height: 0;
-     border-right: 10px solid #222;
+     border-right: 10px solid #1e2a34;
      border-top: 10px solid transparent;
 }
  .chat-avatar {

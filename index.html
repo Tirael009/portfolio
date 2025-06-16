@@ -1,428 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Business Automation Portfolio – AI, CRM, Email, Landing Pages, Bots" name="description"/>
-  <meta content="Automation, CRM, Email Marketing, Directus, n8n, AI Bots, Portfolio" name="keywords"/>
-  <meta content="Ivan Melnik" name="author"/>
-  <title>
-   Ivan Melnik – Automation Specialist
-  </title>
-  <link href="style.css" rel="stylesheet"/>
-  <link href="/source/logo_2.png" rel="icon" type="image/x-icon"/>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
- </head>
- <body>
-  <header class="navbar">
-   <div class="nav-container">
-    <div class="logo">
-     <img alt="Animated Logo" class="animated-logo" src="/source/logo.png"/>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ivan Melnik - Automation Specialist. AI-powered workflows, CRM automation, and business process optimization for 24/7 operations.">
+  <meta name="keywords" content="Automation, CRM, Email Marketing, Directus, n8n, AI Bots, Workflow Automation">
+  <meta name="author" content="Ivan Melnik">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" as="style" crossorigin>
+  <link rel="preload" href="/source/logo_2.webp" as="image" type="image/webp">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- CSS (non-blocking) -->
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  
+  <!-- Fallback for non-JS -->
+  <noscript>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap">
+  </noscript>
+  
+  <!-- Favicon (modern format) -->
+  <link rel="icon" href="/source/logo_2.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="/source/logo_2.webp">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yourdomain.com">
+  
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ivan Melnik",
+    "jobTitle": "Automation Specialist",
+    "url": "https://yourdomain.com",
+    "sameAs": [
+      "https://linkedin.com/in/yourprofile",
+      "https://github.com/yourprofile"
+    ],
+    "description": "Professional automation engineer specializing in AI-powered workflows, CRM automation, and business process optimization."
+  }
+  </script>
+  
+  <title>Ivan Melnik | AI & Automation Specialist | Business Process Optimization</title>
+</head>
+<body class="fade-in">
+  
+  <!-- Header with semantic navigation -->
+<header class="navbar" role="banner">
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="logo" itemscope itemtype="https://schema.org/Organization">
+      <img alt="Ivan Melnik Automation Logo" class="animated-logo" src="/source/logo.webp" loading="lazy" width="100" height="80" itemprop="logo">
     </div>
-    <nav class="nav-links">
-     <a class="nav-link active" data-translate="home" href="#home">
-      Home
-     </a>
-     <a class="nav-link" data-translate="about" href="#about">
-      About
-     </a>
-     <a class="nav-link" data-translate="skills" href="#skills">
-      Skills
-     </a>
-     <a class="nav-link" data-translate="projects" href="#projects">
-      Projects
-     </a>
-     <a class="nav-link" data-translate="contact" href="#contact">
-      Contact
-     </a>
+
+      <!-- Nav Menu -->
+    <nav class="nav-links" aria-label="Main navigation">
+    <ul>
+        <li><a class="nav-link" data-translate="home" href="#home">Home</a></li>
+        <li><a class="nav-link" data-translate="about" href="#about">About</a></li>
+        <li><a class="nav-link" data-translate="skills" href="#skills">Skills</a></li>
+        <li><a class="nav-link" data-translate="projects" href="#projects">Projects</a></li>
+        <li><a class="nav-link" data-translate="contact" href="#contact">Contact</a></li>
+    </ul>
     </nav>
-    <div class="lang-switcher">
-     <button class="lang active" data-lang="en">
-      EN
-     </button>
-     <button class="lang" data-lang="ua">
-      UA
-     </button>
-     <button class="lang" data-lang="es">
-      ES
-     </button>
+    
+    <!-- Language Switcher -->
+    <div class="lang-switcher" aria-label="Language switcher">
+      <button class="lang active" data-lang="en" aria-label="English">EN</button>
+      <button class="lang" data-lang="ua" aria-label="Ukrainian">UA</button>
+      <button class="lang" data-lang="es" aria-label="Spanish">ES</button>
     </div>
-    <div class="burger" id="burger">
-     <span>
-     </span>
-     <span>
-     </span>
-     <span>
-     </span>
-    </div>
-   </div>
-  </header>
-  <section class="hero" id="home">
-   <div class="hero-text reveal left">
-    <h1 data-translate="hero-heading">
-     AI-Powered Workflows
-     <br/>
-     Real Business Impact.
-    </h1>
-    <p data-translate="hero-desc">
-     I build automated systems that handle your leads, sales, emails, and CRM — so your business runs 24/7, without micromanagement.
-    </p>
-    <a href="#contact">
-     <button class="explore-btn" data-translate="explore-more">
-      Let’s Automate
-     </button>
-    </a>
-   </div>
-   <div class="hero-photo reveal right">
-    <img alt="My photo" class="hero-photo-img" src="/source/photo.jpg"/>
-   </div>
-  </section>
-  <section class="about reveal" id="about">
-   <div class="about-container">
-    <h2 data-translate="about-title">
-     About Me
-    </h2>
-    <div class="about-columns">
-     <p class="about-intro" data-translate="about-text-line-1">
-      I'm Ivan — an automation engineer who helps businesses simplify workflows, eliminate manual work, and scale effectively.
-     </p>
-     <p data-translate="about-text-line-2">
-      I design backend systems built with
-      <strong>
-       n8n
-      </strong>
-      ,
-      <strong>
-       Directus
-      </strong>
-      , and
-      <strong>
-       OpenAI
-      </strong>
-      to automate emails, reporting, task flows, notifications, and custom logic — so your tools work together, not in silos.
-     </p>
-     <p data-translate="about-text-line-3">
-      My solutions operate 24/7 — processing data, generating accurate insights, reducing human errors, and ensuring consistency. They don’t sleep, forget, or slow down — even at peak times.
-     </p>
-     <div class="about-benefits">
-      <h3 data-translate="about-benefits-heading">
-       What you’ll gain:
-      </h3>
-      <ul>
-       <li data-translate="about-benefit-1">
-        Significant time savings every month by automating repetitive tasks
-       </li>
-       <li data-translate="about-benefit-2">
-        Lower operational costs through streamlined processes
-       </li>
-       <li data-translate="about-benefit-3">
-        Reliable data and real-time reporting for faster decisions
-       </li>
-       <li data-translate="about-benefit-4">
-        Scalable systems that handle increasing loads effortlessly
-       </li>
-       <li data-translate="about-benefit-5">
-        Better customer experience through speed and accuracy
-       </li>
-      </ul>
-     </div>
-     <p class="about-closing" data-translate="about-text-line-4">
-      If you want a business that runs smarter — not harder — with smooth workflows and data-driven clarity, let’s build it together.
-     </p>
-    </div>
-   </div>
-  </section>
-  <section class="capabilities reveal" id="skills">
-   <h2 class="capabilities-title" data-translate="platform-capabilities">
-    Skills
-   </h2>
-   <div class="cards">
-    <div class="card reveal" data-translate="custom-automations">
-     <img alt="Custom Automations Icon" class="card-icon" src="/source/icon_1.png"/>
-     <h3 data-translate="custom-automations-title">
-      Workflow Automation
-     </h3>
-     <p data-translate="custom-automations-desc">
-      Process automation: leads, tasks, notifications, reports — no manual routine.
-     </p>
-    </div>
-    <div class="card reveal" data-translate="ai-bots">
-     <img alt="AI Bots Icon" class="card-icon" src="/source/icon_2.png"/>
-     <h3 data-translate="ai-bots-title">
-      AI Systems &amp; Bots
-     </h3>
-     <p data-translate="ai-bots-desc">
-      AI for analytics, smart replies, content generation and chatbot flows.
-     </p>
-    </div>
-    <div class="card reveal" data-translate="third-party-integrations">
-     <img alt="Third Party Integrations Icon" class="card-icon" src="/source/icon_3.png"/>
-     <h3 data-translate="third-party-integrations-title">
-      Third-Party Integrations
-     </h3>
-     <p data-translate="third-party-integrations-desc">
-      Connect Telegram, Stripe, OpenAI, ZeroBounce and many more.
-     </p>
-    </div>
-    <div class="card reveal" data-translate="automation-analytics">
-     <img alt="Automation Analytics Icon" class="card-icon" src="/source/icon_4.png"/>
-     <h3 data-translate="automation-analytics-title">
-      Real-Time Dashboards
-     </h3>
-     <p data-translate="automation-analytics-desc">
-      Live analytics and charts to monitor sales and operations.
-     </p>
-    </div>
-    <div class="card reveal" data-translate="ai-automation">
-     <img alt="AI Automation Icon" class="card-icon" src="/source/icon_5.png"/>
-     <h3 data-translate="ai-automation-title">
-      AI-Driven Automation
-     </h3>
-     <p data-translate="ai-automation-desc">
-      Intelligent workflows that analyze, decide, create, and act for you.
-     </p>
-    </div>
-    <div class="card reveal" data-translate="email-setup">
-     <img alt="Email Icon" class="card-icon" src="/source/icon_6.png"/>
-     <h3 data-translate="email-setup-title">
-      Email Infrastructure
-     </h3>
-     <p data-translate="email-setup-desc">
-      Email marketing with Amazon SES: warm-up, validation, design, inbox boost.
-     </p>
-    </div>
-    <div class="card reveal" data-translate="crm-workflows">
-     <img alt="CRM Icon" class="card-icon" src="/source/icon_7.png"/>
-     <h3 data-translate="crm-workflows-title">
-      Custom CRM Logic
-     </h3>
-     <p data-translate="crm-workflows-desc">
-      Smart CRM automation: follow-ups, reminders, status flows.
-     </p>
-    </div>
-    <div class="card reveal" data-translate="landing-pages">
-     <img alt="Landing Page Icon" class="card-icon" src="/source/icon_8.png"/>
-     <h3 data-translate="landing-pages-title">
-      Landing Pages
-     </h3>
-     <p data-translate="landing-pages-desc">
-      Landing pages and forms: responsive design, CRM-ready and analytics ready.
-     </p>
-    </div>
-    <div class="card reveal" data-translate="code-skills">
-     <img alt="Code Skills Icon" class="card-icon" src="/source/icon_9.png"/>
-     <h3 data-translate="code-skills-title">
-      JS / Python / SQL
-     </h3>
-     <p data-translate="code-skills-desc">
-      Code-level logic: functions, transformations and API scripting.
-     </p>
-    </div>
-    <div class="card reveal" data-translate="platforms">
-     <img alt="Platforms Icon" class="card-icon" src="/source/icon_10.png"/>
-     <h3 data-translate="platforms-title">
-      n8n, Make, Directus
-     </h3>
-     <p data-translate="platforms-desc">
-      Expert workflows using top open-source and low-code automation tools.
-     </p>
-    </div>
-   </div>
-  </section>
-  <section class="examples reveal" id="projects">
-   <h2 class="section-title" data-translate="ai-usecases-title">
-    AI Automations in Action
-   </h2>
-   <div class="usecases-grid">
-    <!-- Схема продаж -->
-    <div class="example reveal">
-     <h4 class="usecase-heading" data-translate="sales-notification">
-      AI-Powered Sales Automation
-     </h4>
-     <img alt="Sales Notification Workflow" src="/source/sales.png"/>
-     <p class="caption" data-translate="sales-ai-caption">
-      AI automatically scores leads, generates offers, updates CRM and sends follow-up emails — all in one workflow.
-     </p>
-    </div>
-    <!-- Чат с ботом -->
-    <div class="example reveal">
-     <h4 class="usecase-heading" data-translate="ai-chatbot">
-      Conversational Assistant with OpenAI
-     </h4>
-     <!-- Вставь сюда ранее исправленный chat-box -->
-     <div id="chat-trigger">
-      <div class="chat-box">
-       <div class="chat-message user">
-        <span>
-         User:
-        </span>
-        <p data-translate="chat-user-1">
-         Hey, can you summarize today's incoming leads?
+    
+    <!-- Burger Menu -->
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="burger-line top-line"></span>
+      <span class="burger-line middle-line"></span>
+      <span class="burger-line bottom-line"></span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a class="nav-link" data-translate="home" href="#home">Home</a></li>
+    <li><a class="nav-link" data-translate="about" href="#about">About</a></li>
+    <li><a class="nav-link" data-translate="skills" href="#skills">Skills</a></li>
+    <li><a class="nav-link" data-translate="projects" href="#projects">Projects</a></li>
+    <li><a class="nav-link" data-translate="contact" href="#contact">Contact</a></li>
+  </ul>
+</div>
+</header>
+
+  <main id="main-content" role="main">
+    <!-- Hero section -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero-text reveal left">
+            <h1 id="hero-heading" data-translate="hero-heading">
+                <span class="hero-line" data-translate="hero-heading-line1">AI-Powered Workflows.</span>
+                <span class="hero-line" data-translate="hero-heading-line2">Real Business Impact.</span>
+            </h1>
+        <p class="hero-subtitle" data-translate="hero-desc">
+          I build automated systems that handle your leads, sales, emails, and CRM — so your business runs 24/7, without micromanagement.
         </p>
-       </div>
-       <div class="chat-message bot">
-        <span>
-         AI Bot:
-        </span>
-        <p data-translate="chat-bot-1">
-         Sure! You've received 38 new leads today. 24 were qualified, 14 unqualified.
-        </p>
-       </div>
-       <div class="chat-message user">
-        <span>
-         User:
-        </span>
-        <p data-translate="chat-user-2">
-         Can you send the qualified ones to the CRM?
-        </p>
-       </div>
-       <div class="chat-message bot">
-        <span>
-         AI Bot:
-        </span>
-        <p data-translate="chat-bot-2">
-         Already done ✅ Leads pushed to CRM with tags and scores.
-        </p>
-       </div>
-       <div class="chat-message user">
-        <span>
-         User:
-        </span>
-        <p data-translate="chat-user-3">
-         Great. Draft a follow-up email for the top 5.
-        </p>
-       </div>
-       <div class="chat-message bot">
-        <span>
-         AI Bot:
-        </span>
-        <p data-translate="chat-bot-3">
-         Email prepared. Would you like me to send it now or save as draft?
-        </p>
-       </div>
-       <div class="chat-message user">
-        <span>
-         User:
-        </span>
-        <p data-translate="chat-user-4">
-         Save it as draft. I’ll review it in a bit.
-        </p>
-       </div>
-       <div class="chat-message bot">
-        <span>
-         AI Bot:
-        </span>
-        <p data-translate="chat-bot-4">
-         Done. Let me know if you'd like to schedule it later.
-        </p>
-       </div>
+        <a href="#contact" class="explore-btn" data-translate="explore-more">
+          Let's Automate
+        </a>
       </div>
-      <p class="caption" data-translate="chatbot-caption">
-       AI chatbot that communicates with users, compiles reports, and executes requests — like sending data to a manager.
-      </p>
-     </div>
+      <div class="hero-photo reveal right">
+        <img alt="Ivan Melnik, Automation Specialist" class="hero-photo-img" src="/source/photo.webp" loading="eagerly" width="400" height="400" decoding="async">
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about reveal" id="about" aria-labelledby="about-title">
+      <div class="about-container">
+        <h2 id="about-title" class="about-title" data-translate="about-title">About Me</h2>
+        <div class="about-columns">
+          <p class="about-intro" data-translate="about-text-line-1">
+            I'm Ivan — an automation engineer who helps businesses simplify workflows, eliminate manual work, and scale effectively.
+          </p>
+          <p class="about-text" data-translate="about-text-line-2">
+            I design backend systems built with <strong>n8n</strong>, <strong>Directus</strong>, and <strong>OpenAI</strong> to automate emails, reporting, task flows, notifications, and custom logic — so your tools work together, not in silos.
+          </p>
+          <p data-translate="about-text-line-3">
+            My solutions operate 24/7 — processing data, generating accurate insights, reducing human errors, and ensuring consistency. They don't sleep, forget, or slow down — even at peak times.
+          </p>
+          
+          <div class="about-benefits" aria-labelledby="benefits-heading">
+            <h3 id="benefits-heading" data-translate="about-benefits-title">What you'll gain:</h3>
+            <ul>
+              <li data-translate="about-benefit-1">Significant time savings every month by automating repetitive tasks</li>
+              <li data-translate="about-benefit-2">Lower operational costs through streamlined processes</li>
+              <li data-translate="about-benefit-3">Reliable data and real-time reporting for faster decisions</li>
+              <li data-translate="about-benefit-4">Scalable systems that handle increasing loads effortlessly</li>
+              <li data-translate="about-benefit-5">Better customer experience through speed and accuracy</li>
+            </ul>
+          </div>
+          
+          <p class="about-closing" data-translate="about-text-line-4">
+            If you want a business that runs smarter — not harder — with smooth workflows and data-driven clarity, let's build it together.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills section -->
+    <section class="capabilities reveal" id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="capabilities-title" data-translate="platform-capabilities">Skills</h2>
+      <div class="cards" role="list">
+        <div class="card reveal" role="listitem" data-translate="custom-automations" aria-labelledby="card1-title">
+          <img alt="Workflow Automation Icon" class="card-icon" src="/source/icon_1.webp" loading="lazy" width="80" height="80">
+          <h3 id="card1-title" data-translate="custom-automations-title">Workflow Automation</h3>
+          <p data-translate="custom-automations-desc">Process automation: leads, tasks, notifications, reports — no manual routine.</p>
+        </div>
+        
+        <div class="card reveal" role="listitem" data-translate="ai-bots" aria-labelledby="card2-title">
+          <img alt="AI Bots Icon" class="card-icon" src="/source/icon_2.webp" loading="lazy" width="80" height="80">
+          <h3 id="card2-title" data-translate="ai-bots-title">AI Systems &amp; Bots</h3>
+          <p data-translate="ai-bots-desc">AI for analytics, smart replies, content generation and chatbot flows.</p>
+        </div>
+        
+        <div class="card reveal" role="listitem" data-translate="third-party-integrations" aria-labelledby="card3-title">
+          <img alt="Third Party Integrations Icon" class="card-icon" src="/source/icon_3.webp" loading="lazy" width="80" height="80">
+          <h3 id="card3-title" data-translate="third-party-integrations-title">Third-Party Integrations</h3>
+          <p data-translate="third-party-integrations-desc">Connect Telegram, Stripe, OpenAI, ZeroBounce and many more.</p>
+        </div>
+        
+        <div class="card reveal" role="listitem" data-translate="automation-analytics" aria-labelledby="card4-title">
+          <img alt="Automation Analytics Icon" class="card-icon" src="/source/icon_4.webp" loading="lazy" width="80" height="80">
+          <h3 id="card4-title" data-translate="automation-analytics-title">Real-Time Dashboards</h3>
+          <p data-translate="automation-analytics-desc">Live analytics and charts to monitor sales and operations.</p>
+        </div>
+        
+        <div class="card reveal" role="listitem" data-translate="ai-automation" aria-labelledby="card5-title">
+          <img alt="AI Automation Icon" class="card-icon" src="/source/icon_5.webp" loading="lazy" width="80" height="80">
+          <h3 id="card5-title" data-translate="ai-automation-title">AI-Driven Automation</h3>
+          <p data-translate="ai-automation-desc">Intelligent workflows that analyze, decide, create, and act for you.</p>
+        </div>
+        
+        <div class="card reveal" role="listitem" data-translate="email-setup" aria-labelledby="card6-title">
+          <img alt="Email Icon" class="card-icon" src="/source/icon_6.webp" loading="lazy" width="80" height="80">
+          <h3 id="card6-title" data-translate="email-setup-title">Email Infrastructure</h3>
+          <p data-translate="email-setup-desc">Email marketing with Amazon SES: warm-up, validation, design, inbox boost.</p>
+        </div>
+        
+        <div class="card reveal" role="listitem" data-translate="crm-workflows" aria-labelledby="card7-title">
+          <img alt="CRM Icon" class="card-icon" src="/source/icon_7.webp" loading="lazy" width="80" height="80">
+          <h3 id="card7-title" data-translate="crm-workflows-title">Custom CRM Logic</h3>
+          <p data-translate="crm-workflows-desc">Smart CRM automation: follow-ups, reminders, status flows.</p>
+        </div>
+        
+        <div class="card reveal" role="listitem" data-translate="landing-pages" aria-labelledby="card8-title">
+          <img alt="Landing Page Icon" class="card-icon" src="/source/icon_8.webp" loading="lazy" width="80" height="80">
+          <h3 id="card8-title" data-translate="landing-pages-title">Landing Pages</h3>
+          <p data-translate="landing-pages-desc">Landing pages and forms: responsive design, CRM-ready and analytics ready.</p>
+        </div>
+        
+        <div class="card reveal" role="listitem" data-translate="code-skills" aria-labelledby="card9-title">
+          <img alt="Code Skills Icon" class="card-icon" src="/source/icon_9.webp" loading="lazy" width="80" height="80">
+          <h3 id="card9-title" data-translate="code-skills-title">JS / Python / SQL</h3>
+          <p data-translate="code-skills-desc">Code-level logic: functions, transformations and API scripting.</p>
+        </div>
+        
+        <div class="card reveal" role="listitem" data-translate="platforms" aria-labelledby="card10-title">
+          <img alt="Platforms Icon" class="card-icon" src="/source/icon_10.webp" loading="lazy" width="80" height="80">
+          <h3 id="card10-title" data-translate="platforms-title">n8n, Make, Directus</h3>
+          <p data-translate="platforms-desc">Expert workflows using top open-source and low-code automation tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="examples reveal" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title" data-translate="ai-usecases-title">AI Automations in Action</h2>
+      <div class="usecases-grid">
+        <article class="example reveal" aria-labelledby="sales-automation-title">
+          <h4 id="sales-automation-title" class="usecase-heading" data-translate="sales-notification">AI-Powered Sales Automation</h4>
+          <img alt="Sales automation workflow diagram" src="/source/sales.webp" loading="lazy" width="600" height="400">
+          <p class="caption" data-translate="sales-ai-caption">
+            AI automatically scores leads, generates offers, updates CRM and sends follow-up emails — all in one workflow.
+          </p>
+        </article>
+        
+        <article class="example reveal" aria-labelledby="chatbot-title">
+          <h4 id="chatbot-title" class="usecase-heading" data-translate="ai-chatbot">Conversational Assistant with OpenAI</h4>
+          <div id="chat-trigger" role="document">
+            <div class="chat-box">
+              <div class="chat-message user">
+                <span>User:</span>
+                <p data-translate="chat-user-1">Hey, can you summarize today's incoming leads?</p>
+              </div>
+              <div class="chat-message bot">
+                <span>AI Bot:</span>
+                <p data-translate="chat-bot-1">Sure! You've received 38 new leads today. 24 were qualified, 14 unqualified.</p>
+              </div>
+              <div class="chat-message user">
+                <span>User:</span>
+                <p data-translate="chat-user-2">Can you send the qualified ones to the CRM?</p>
+              </div>
+              <div class="chat-message bot">
+                <span>AI Bot:</span>
+                <p data-translate="chat-bot-2">Already done ✅ Leads pushed to CRM with tags and scores.</p>
+              </div>
+              <div class="chat-message user">
+                <span>User:</span>
+                <p data-translate="chat-user-3">Great. Draft a follow-up email for the top 5.</p>
+              </div>
+              <div class="chat-message bot">
+                <span>AI Bot:</span>
+                <p data-translate="chat-bot-3">Email prepared. Would you like me to send it now or save as draft?</p>
+              </div>
+              <div class="chat-message user">
+                <span>User:</span>
+                <p data-translate="chat-user-4">Save it as draft. I'll review it in a bit.</p>
+              </div>
+              <div class="chat-message bot">
+                <span>AI Bot:</span>
+                <p data-translate="chat-bot-4">Done. Let me know if you'd like to schedule it later.</p>
+              </div>
+            </div>
+            <p class="caption" data-translate="chatbot-caption">
+              AI chatbot that communicates with users, compiles reports, and executes requests — like sending data to a manager.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact form -->
+    <section class="contact-form reveal" id="contact" aria-labelledby="contact-title">
+      <div class="form-container">
+        <h3 id="contact-title" data-translate="contact-us">Contact Us</h3>
+        <form id="contactForm" role="form" aria-label="Contact form">
+          <div class="form-group">
+            <label for="name" data-translate="name">Name</label>
+            <input id="name" name="name" type="text" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="email" data-translate="email">Email</label>
+            <input id="email" name="email" type="email" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="phone" data-translate="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel">
+          </div>
+          <div class="form-group">
+            <label for="message" data-translate="message">Message</label>
+            <textarea id="message" name="message" required aria-required="true" rows="5"></textarea>
+          </div>
+          <div class="form-group checkbox-group">
+            <input id="terms" type="checkbox" required aria-required="true">
+            <label for="terms" data-translate="agree-terms">I agree to the privacy policy and to be contacted regarding my request</label>
+          </div>
+          <button type="submit" data-translate="send">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-header">
+      <p class="footer-logo">IVAN MELNIK</p>
+      <p class="footer-copy">Automation specialist creating AI-powered workflows that drive real business impact.</p>
+      <p class="footer-copy">© <span id="current-year">2025</span> All rights reserved</p>
     </div>
-   </div>
-  </section>
-  <section class="contact-form reveal" id="contact">
-   <div class="form-container">
-    <h3 data-translate="contact-us">
-     Contact Us
-    </h3>
-    <form id="contactForm">
-     <div class="form-group">
-      <label data-translate="name" for="name">
-       Name
-      </label>
-      <input id="name" name="name" required="" type="text"/>
-     </div>
-     <div class="form-group">
-      <label data-translate="email" for="email">
-       Email
-      </label>
-      <input id="email" name="email" required="" type="email"/>
-     </div>
-     <div class="form-group">
-      <label data-translate="phone" for="phone">
-       Phone Number
-      </label>
-      <input id="phone" name="phone" type="tel"/>
-     </div>
-     <div class="form-group">
-      <label data-translate="message" for="message">
-       Message
-      </label>
-      <textarea id="message" name="message" required="" rows="5"></textarea>
-     </div>
-     <div class="form-group checkbox-group">
-      <input id="terms" required="" type="checkbox"/>
-      <label data-translate="agree-terms" for="terms">
-       I agree to the privacy policy and to be contacted regarding my request
-      </label>
-     </div>
-     <button data-translate="send" type="submit">
-      Send
-     </button>
-    </form>
-   </div>
-  </section>
-  <footer class="footer">
-   <div class="footer-container">
-    <!-- Левая часть -->
-    <div class="footer-left">
-     <p class="footer-logo">
-      IVAN MELNIK
-     </p>
-     <p class="footer-copy">
-      © 2025 All rights reserved
-     </p>
+    
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <h4 class="footer-nav-title">NAVIGATION</h4>
+      <ul class="nav-links-row" style="list-style-type: none; display: flex; gap: 1.5rem; padding: 0; margin: 0;">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <div class="footer-socials">
+      <h4 class="footer-nav-title">Connect</h4>
+      <ul class="social-icons-container" style="list-style-type: none; display: flex; gap: 1rem; padding: 0; margin: 0;">
+        <li><a class="social-icon" href="#" aria-label="Telegram"><img src="source/icon_telegram.webp" alt="Telegram" loading="lazy" width="20" height="20"></a></li>
+        <li><a class="social-icon" href="#" aria-label="WhatsApp"><img src="source/icon_whatsapp.webp" alt="WhatsApp" loading="lazy" width="20" height="20"></a></li>
+        <li><a class="social-icon" href="#" aria-label="Email"><img src="source/icon_email.webp" alt="Email" loading="lazy" width="20" height="20"></a></li>
+        <li><a class="social-icon" href="#" aria-label="LinkedIn"><img src="source/icon_linkedin.webp" alt="LinkedIn" loading="lazy" width="20" height="20"></a></li>
+      </ul>
     </div>
-    <!-- Навигационные ссылки -->
-    <div class="footer-right">
-     <a class="footer-link" data-translate="home" href="#home">
-      Home
-     </a>
-     <a class="footer-link" data-translate="about" href="#about">
-      About
-     </a>
-     <a class="footer-link" data-translate="skills" href="#skills">
-      Skills
-     </a>
-     <a class="footer-link" data-translate="projects" href="#projects">
-      Projects
-     </a>
-     <a class="footer-link" data-translate="contact" href="#contact">
-      Contact
-     </a>
+      
+      <div class="footer-hire">
+        <h4 class="footer-nav-title">Ready to automate?</h4>
+        <a href="#contact" class="hire-btn">Hire Me</a>
+      </div>
+      
+      <!-- <div class="footer-bottom">
+        <nav class="footer-legal" aria-label="Legal links">
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </nav>
+      </div> -->
     </div>
-    <!-- Соцсети и кнопка -->
-    <div class="footer-bottom">
-     <div class="footer-socials">
-      <a aria-label="Telegram" class="social-icon" href="https://t.me/IvanMelnik009" rel="noopener noreferrer" target="_blank">
-       <img alt="Telegram" src="source/icon_telegram.png"/>
-      </a>
-      <a aria-label="WhatsApp" class="social-icon" href="https://wa.me/380983722323" rel="noopener noreferrer" target="_blank">
-       <img alt="WhatsApp" src="source/icon_whatsapp.png"/>
-      </a>
-      <a aria-label="Email" class="social-icon" href="mailto:ivanmelniknik1999@gmail.com">
-       <img alt="Email" src="source/icon_email.png"/>
-      </a>
-      <a aria-label="LinkedIn" class="social-icon" href="https://linkedin.com/in/yourname" rel="noopener noreferrer" target="_blank">
-       <img alt="LinkedIn" src="source/icon_linkedin.png"/>
-      </a>
-     </div>
-     <div class="footer-hire">
-      <a class="hire-btn" href="#contact">
-       Hire Me
-      </a>
-     </div>
-    </div>
-   </div>
   </footer>
-  <script src="script.js">
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  
+  <!-- Inline script for critical functionality -->
+  <script>
+    // Set current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Load CSS asynchronously fallback
+    window.addEventListener('load', function() {
+      const links = document.querySelectorAll('link[media="print"]');
+      links.forEach(link => {
+        link.onload = null;
+        link.media = 'all';
+      });
+    });
   </script>
-  <script src="form-handler.js">
-  </script>
- </body>
+</body>
 </html>

@@ -8,6 +8,7 @@
   <meta name="author" content="Ivan Melnik">
   
   <!-- Preload critical resources -->
+  <link rel="preload" href="css/base.css" as="style">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" as="style" crossorigin>
   <link rel="preload" href="/source/logo_2.webp" as="image" type="image/webp">
   
@@ -16,11 +17,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <!-- CSS (non-blocking) -->
-  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/base.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/header.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/hero.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/about.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/skills.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/projects.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/contact_form.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/footer.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/media.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'">
   
   <!-- Fallback for non-JS -->
   <noscript>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact_form.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap">
   </noscript>
   
@@ -71,10 +90,17 @@
     </nav>
     
     <!-- Language Switcher -->
-    <div class="lang-switcher" aria-label="Language switcher">
-      <button class="lang active" data-lang="en" aria-label="English">EN</button>
-      <button class="lang" data-lang="ua" aria-label="Ukrainian">UA</button>
-      <button class="lang" data-lang="es" aria-label="Spanish">ES</button>
+    <div class="lang-switcher-container">
+      <button class="lang-switcher-toggle" aria-expanded="false" aria-controls="lang-dropdown" aria-label="Change language">
+        <span class="current-lang">EN</span>
+      </button>
+      <div class="lang-switcher" id="lang-dropdown">
+        <button class="lang active" data-lang="en" aria-label="English">English</button>
+        <button class="lang" data-lang="ua" aria-label="Ukrainian">Українська</button>
+        <button class="lang" data-lang="es" aria-label="Spanish">Español</button>
+        <button class="lang" data-lang="de" aria-label="German">Deutsch</button>
+        <button class="lang" data-lang="ar" aria-label="Arabic">العربية</button>
+      </div>
     </div>
     
     <!-- Burger Menu -->
@@ -85,7 +111,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu">
+<div class="mobile-menu" id="mobile-menu">
   <ul>
     <li><a class="nav-link" data-translate="home" href="#home">Home</a></li>
     <li><a class="nav-link" data-translate="about" href="#about">About</a></li>
@@ -93,12 +119,22 @@
     <li><a class="nav-link" data-translate="projects" href="#projects">Projects</a></li>
     <li><a class="nav-link" data-translate="contact" href="#contact">Contact</a></li>
   </ul>
+  
+  <div class="lang-switcher-container">
+    <div class="lang-switcher" id="lang-dropdown">
+      <button class="lang active" data-lang="en" aria-label="English">English</button>
+      <button class="lang" data-lang="ua" aria-label="Ukrainian">Українська</button>
+      <button class="lang" data-lang="es" aria-label="Spanish">Español</button>
+      <button class="lang" data-lang="de" aria-label="German">Deutsch</button>
+      <button class="lang" data-lang="ar" aria-label="Arabic">العربية</button>
+    </div>
+  </div>
 </div>
 </header>
 
   <main id="main-content" role="main">
     <!-- Hero section -->
-    <section class="hero" id="home" aria-labelledby="hero-heading">
+    <section class="hero" id="home" aria-labelledby="hero-heading" lang="de">
       <div class="hero-text reveal left">
             <h1 id="hero-heading" data-translate="hero-heading">
                 <span class="hero-line" data-translate="hero-heading-line1">AI-Powered Workflows.</span>
@@ -220,7 +256,7 @@
       <h2 id="projects-title" class="section-title" data-translate="ai-usecases-title">AI Automations in Action</h2>
       <div class="usecases-grid">
         <article class="example reveal" aria-labelledby="sales-automation-title">
-          <h4 id="sales-automation-title" class="usecase-heading" data-translate="sales-notification">AI-Powered Sales Automation</h4>
+          <h3 id="sales-automation-title" class="usecase-heading" data-translate="sales-notification">AI-Powered Sales Automation</h3>
           <img alt="Sales automation workflow diagram" src="/source/sales.webp" loading="lazy" width="600" height="400">
           <p class="caption" data-translate="sales-ai-caption">
             AI automatically scores leads, generates offers, updates CRM and sends follow-up emails — all in one workflow.
@@ -228,7 +264,7 @@
         </article>
         
         <article class="example reveal" aria-labelledby="chatbot-title">
-          <h4 id="chatbot-title" class="usecase-heading" data-translate="ai-chatbot">Conversational Assistant with OpenAI</h4>
+          <h id="chatbot-title" class="usecase-heading" data-translate="ai-chatbot">Conversational Assistant with OpenAI</h>
           <div id="chat-trigger" role="document">
             <div class="chat-box">
               <div class="chat-message user">
@@ -307,51 +343,44 @@
   <footer class="footer" role="contentinfo">
   <div class="footer-container">
     <div class="footer-header">
-      <p class="footer-logo">IVAN MELNIK</p>
-      <p class="footer-copy">Automation specialist creating AI-powered workflows that drive real business impact.</p>
-      <p class="footer-copy">© <span id="current-year">2025</span> All rights reserved</p>
+      <p class="footer-logo">IVAN MELNYK</p>
+      <p class="footer-copy" data-translate="footer-specialist">Automation specialist creating AI-powered workflows that drive real business impact.</p>
+      <p class="footer-copy">© <span id="current-year">2025</span> <span data-translate="footer-rights">All rights reserved</span></p>
     </div>
     
     <nav class="footer-nav" aria-label="Footer navigation">
-      <h4 class="footer-nav-title">NAVIGATION</h4>
+      <h4 class="footer-nav-title" data-translate="footer-navigation">NAVIGATION</h4>
       <ul class="nav-links-row" style="list-style-type: none; display: flex; gap: 1.5rem; padding: 0; margin: 0;">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-translate="home">Home</a></li>
+        <li><a href="#about" data-translate="about">About</a></li>
+        <li><a href="#skills" data-translate="skills">Skills</a></li>
+        <li><a href="#projects" data-translate="projects">Projects</a></li>
+        <li><a href="#contact" data-translate="contact">Contact</a></li>
       </ul>
     </nav>
     
     <div class="footer-socials">
-      <h4 class="footer-nav-title">Connect</h4>
+      <h4 class="footer-nav-title" data-translate="footer-connect">Connect</h4>
       <ul class="social-icons-container" style="list-style-type: none; display: flex; gap: 1rem; padding: 0; margin: 0;">
-        <li><a class="social-icon" href="#" aria-label="Telegram"><img src="source/icon_telegram.webp" alt="Telegram" loading="lazy" width="20" height="20"></a></li>
-        <li><a class="social-icon" href="#" aria-label="WhatsApp"><img src="source/icon_whatsapp.webp" alt="WhatsApp" loading="lazy" width="20" height="20"></a></li>
-        <li><a class="social-icon" href="#" aria-label="Email"><img src="source/icon_email.webp" alt="Email" loading="lazy" width="20" height="20"></a></li>
-        <li><a class="social-icon" href="#" aria-label="LinkedIn"><img src="source/icon_linkedin.webp" alt="LinkedIn" loading="lazy" width="20" height="20"></a></li>
+        <li><a class="social-icon" href="https://t.me/IvanMelnik009" aria-label="Telegram"><img src="source/icon_telegram.webp" alt="Telegram" loading="lazy" width="20" height="20"></a></li>
+        <li><a class="social-icon" href="https://wa.me/380983722323" aria-label="WhatsApp"><img src="source/icon_whatsapp.webp" alt="WhatsApp" loading="lazy" width="20" height="20"></a></li>
+        <li><a class="social-icon" href="mailto:ivanmelniknik1999@gmail.com" aria-label="Email"><img src="source/icon_email.webp" alt="Email" loading="lazy" width="20" height="20"></a></li>
+        <!-- <li><a class="social-icon" href="+380 98 372 2323" aria-label="LinkedIn"><img src="source/icon_linkedin.webp" alt="LinkedIn" loading="lazy" width="20" height="20"></a></li> -->
       </ul>
     </div>
       
-      <div class="footer-hire">
-        <h4 class="footer-nav-title">Ready to automate?</h4>
-        <a href="#contact" class="hire-btn">Hire Me</a>
-      </div>
-      
-      <!-- <div class="footer-bottom">
-        <nav class="footer-legal" aria-label="Legal links">
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookies</a></li>
-          </ul>
-        </nav>
-      </div> -->
+    <div class="footer-hire">
+      <h4 class="footer-nav-title" data-translate="footer-ready">Ready to automate?</h4>
+      <a href="#contact" class="hire-btn" data-translate="footer-hire">Hire Me</a>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <!-- Scripts -->
-  <script src="script.js" defer></script>
+  <script src="js/lang.js" defer></script>
+  <script src="js/chat.js" defer></script>
+  <script src="js/general.js" defer></script>
+  <script src="js/form-handler.js" defer></script>
   
   <!-- Inline script for critical functionality -->
   <script>

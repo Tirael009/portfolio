@@ -1,25 +1,30 @@
-const express = require('express');
-const router = express.Router();
+export async function initFormSubmit(formSelector) {
+  const form = document.querySelector(formSelector);
+  if (!form) return;
 
-router.post('/', async (req, res) => {
-  const { name, email, message, phone } = req.body;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await fetch(`https://directus.botika.cloud/items/form_submissions`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer NNlKVI8S9UI88OfBLAj99lzaZkzGvfRA`,
-      },
-      body: JSON.stringify({ name, email, message, phone }),
-    });
+    const formData = Object.fromEntries(new FormData(form));
+    
+    try {
+      const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-    const result = await response.json();
-    res.status(200).json({ success: true, result });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ success: false, error: err.message });
-  }
-});
+      const result = await response.json();
 
-module.exports = router;
+      if (result.status) {
+        alert('Submitted successfully');
+        form.reset();
+      } else {
+        alert('Validation errors: ' + JSON.stringify(result.errors));
+      }
+    } catch (err) {
+      console.error('Form submission error:', err);
+      alert('Submission failed');
+    }
+  });
+}

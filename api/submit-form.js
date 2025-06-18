@@ -24,7 +24,7 @@ export default async function handler(req, res) {
   try {
     const { name, email, message, phone } = req.body;
 
-    const response = await fetch(`${process.env.DIRECTUS_URL}/items/form_submissions`, {
+    const response = await fetch(`https://directus.botika.cloud/items/form_submissions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

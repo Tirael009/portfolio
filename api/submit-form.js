@@ -1,30 +1,36 @@
-export async function initFormSubmit(formSelector) {
-  const form = document.querySelector(formSelector);
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
   if (!form) return;
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const formData = Object.fromEntries(new FormData(form));
-    
+    const name = form.querySelector('input[name="name"]').value.trim();
+    const email = form.querySelector('input[name="email"]').value.trim();
+    const phone = form.querySelector('input[name="phone"]').value.trim();
+    const message = form.querySelector('textarea[name="message"]').value.trim();
+
+    const payload = { name, email, phone, message };
+
     try {
-      const response = await fetch('/api/submit-form', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+      const res = await fetch("https://directus.botika.cloud/items/form_submissions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer NNlKVI8S9UI88OfBLAj99lzaZkzGvfRA",
+        },
+        body: JSON.stringify({ data: payload }),
       });
 
-      const result = await response.json();
-
-      if (result.status) {
-        alert('Submitted successfully');
+      if (res.ok) {
+        alert("Message sent successfully!");
         form.reset();
       } else {
-        alert('Validation errors: ' + JSON.stringify(result.errors));
+        const err = await res.json();
+        alert("Failed to send message: " + JSON.stringify(err));
       }
     } catch (err) {
-      console.error('Form submission error:', err);
-      alert('Submission failed');
+      alert("Error occurred: " + err.message);
     }
   });
-}
+});
